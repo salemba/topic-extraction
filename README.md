@@ -36,5 +36,26 @@ Optional arguments / *Arguments optionnels* :
 
 Example / *Exemple* :
 ```bash
-python src/main.py --topics 3 data/raw/sample.pdf
+python src/main.py --topics 3 data/raw/marche_normes.pdf
+```
+
+### Sample Output / Exemple de résultat
+
+```text
+Extracting text from data/raw/marche_normes.pdf...
+Initializing Topic Modeler...
+Fitting topic model on 13 document pages/chunks...
+
+--- Extracted Topics ---
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Topic ID ┃ Highest Ranking                                                    ┃ Lowest Ranking                                              ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│        0 │ emploi, travail, plus, œuvre, 2005, marché, mais, au, ainsi, entre │ paris, le, droit, des, leur, être, la, il, ne, les          │
+├──────────┼────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│        1 │ paris, ne, le, marché, des, droit, les, au, pas, par               │ emploi, comme, plus, ainsi, du, bien, ce, aussi, pour, mais │
+├──────────┼────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+│        2 │ marché, aussi, qu, comme, même, que, ainsi, ce, mais, qui          │ emploi, travail, paris, œuvre, le, au, les, être, se, il    │
+└──────────┴────────────────────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────────┘
+
+[Metrics] Finished in 6.29 seconds.
 ```

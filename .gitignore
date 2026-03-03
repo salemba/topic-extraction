@@ -36,5 +36,7 @@ env/
 # Project specific
 data/raw/*
 !data/raw/.gitkeep
+!data/raw/marche_normes.pdf
+!data/raw/en_work_maw.pdf
 data/processed/*
 !data/processed/.gitkeep
