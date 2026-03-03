@@ -1,0 +1,5 @@
+pymupdf>=1.22.0
+turftopic>=0.2.0
+sentence-transformers>=2.2.0
+pytest>=7.0.0
+stop-words>=2024.2.1
