@@ -17,13 +17,25 @@ class TopicModeler:
         from stop_words import get_stop_words
         
         french_stop_words = get_stop_words('fr')
-        # Add a few more common terms that might appear in PDF parsing
-        french_stop_words.extend(['aussi', 'bien', 'cette', 'comme', 'dont', 'entre', 'les', 'leur', 'plus', 'sans', 'sous', 'vers', 'être', 'avoir'])
+        # Add an extensive list of residual stopwords and noise seen in French PDFs
+        extra_stops = [
+            'aussi', 'bien', 'cette', 'comme', 'dont', 'entre', 'les', 'leur', 
+            'plus', 'sans', 'sous', 'vers', 'être', 'avoir', 'mais', 'ainsi', 
+            'par', 'que', 'qui', 'dans', 'des', 'sur', 'pour', 'est', 'pas', 
+            'une', 'avec', 'ces', 'aux', 'sont', 'ont', 'fait', 'faire', 'peut',
+            'très', 'deux', 'tout', 'tous', 'toute', 'toutes', 'celui', 'ceux',
+            'elle', 'elles', 'ils', 'nous', 'vous', 'quand', 'quel', 'quelle',
+            'quelles', 'quels', 'parce', 'alors', 'donc', 'toujours', 'jamais'
+        ]
+        french_stop_words.extend(extra_stops)
+        french_stop_words = list(set(french_stop_words)) # deduplicate
         
         vectorizer = CountVectorizer(
             stop_words=french_stop_words,
             ngram_range=(1, 2), # Allow bigrams for more context
-            min_df=2 # Ignore terms that appear only once
+            min_df=2, # Ignore terms that appear only once
+            max_df=0.85, # HIGHEST IMPACT: Ignore terms that appear in >85% of documents (corpus-specific stop words)
+            token_pattern=r'\b[a-zA-ZÀ-ÿ]{3,}\b' # Only keep words with 3 or more letters
         )
 
         # Using SemanticSignalSeparation which works well out of the box

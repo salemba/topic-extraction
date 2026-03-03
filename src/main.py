@@ -40,6 +40,13 @@ def main():
     print("\n--- Extracted Topics ---")
     modeler.print_topics()
     
+    print("\n--- Topic Themes ---")
+    for topic_id, top_words in topics:
+        # Extract the top 3 words to form a theme title
+        theme_words = [word for word, score in top_words[:3]]
+        theme = " / ".join(theme_words).title()
+        print(f"Topic {topic_id}: {theme}")
+    
     end_time = time.time()
     elapsed = end_time - start_time
     print(f"\n[Metrics] Finished in {elapsed:.2f} seconds.")

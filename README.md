@@ -47,15 +47,14 @@ Initializing Topic Modeler...
 Fitting topic model on 13 document pages/chunks...
 
 --- Extracted Topics ---
-┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃ Topic ID ┃ Highest Ranking                                                    ┃ Lowest Ranking                                              ┃
-┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
-│        0 │ emploi, travail, plus, œuvre, 2005, marché, mais, au, ainsi, entre │ paris, le, droit, des, leur, être, la, il, ne, les          │
-├──────────┼────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
-│        1 │ paris, ne, le, marché, des, droit, les, au, pas, par               │ emploi, comme, plus, ainsi, du, bien, ce, aussi, pour, mais │
-├──────────┼────────────────────────────────────────────────────────────────────┼─────────────────────────────────────────────────────────────┤
-│        2 │ marché, aussi, qu, comme, même, que, ainsi, ce, mais, qui          │ emploi, travail, paris, œuvre, le, au, les, être, se, il    │
-└──────────┴────────────────────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────────┘
+└──────────┴────────────────────────────────────────────────────────────────────────────┴─────────────────────────────────────────────────────────────────────────────┘
 
-[Metrics] Finished in 6.29 seconds.
+--- Topic Themes ---
+Topic 0: Chômage / Allocation / Salaire
+Topic 1: Abrogation Pure / Tend / Laon
+Topic 2: Labour / Droits Travail / Droit Travail
+Topic 3: Globalisation / Guerre Mondiale / Pays Africains
+Topic 4: Agroalimentaires / Éleveurs / Fertiliser
+
+[Metrics] Finished in 6.50 seconds.
 ```
