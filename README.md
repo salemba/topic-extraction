@@ -58,3 +58,17 @@ Topic 4: Agroalimentaires / Éleveurs / Fertiliser
 
 [Metrics] Finished in 6.50 seconds.
 ```
+
+### Web API / API Web
+
+You can also run the application as a Flask API: / *Vous pouvez également lancer l'application sous forme d'API Flask :*
+
+```bash
+python src/app.py
+```
+
+Check that the server is running on `http://localhost:5000` and then query it from another terminal with cURL / *Vérifiez que le serveur tourne sur `http://localhost:5000` et testez avec cURL depuis un autre terminal* :
+
+```bash
+curl -X POST -F "pdf=@data/raw/marche_normes.pdf" http://localhost:5000/extract_topics
+```
